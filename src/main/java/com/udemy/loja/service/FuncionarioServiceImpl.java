@@ -4,13 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+// import org.springframework.transaction.annotation.Transactional;
 
 import com.udemy.loja.dao.FuncionarioDao;
 import com.udemy.loja.models.Funcionario;
 
 @Service
-@Transactional(readOnly = false)
+// @Transactional(readOnly = false)
 public class FuncionarioServiceImpl implements FuncionarioService {
 
     @Autowired
@@ -35,13 +35,13 @@ public class FuncionarioServiceImpl implements FuncionarioService {
     }
 
     @Override
-    @Transactional(readOnly = true)
+    // @Transactional(readOnly = true)
     public Funcionario buscarPorId(Long id) {
         return dao.findById(id);
     }
 
     @Override
-    @Transactional(readOnly = true)
+    // @Transactional(readOnly = true)
     public List<Funcionario> buscarTodos() {
         return dao.findAll();
     }
